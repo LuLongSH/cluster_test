@@ -1,0 +1,18 @@
+<div class="container" (window:resize)="onResize($event)" (window:load)='onResize($event)'>
+  <div class="flex-container" #container>
+    <div class="flex-item animated"  #flexItem *ngFor="let item of data, let index = index">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">
+            <span class="badge badge-info">{{index + 1}}</span>
+            {{item.content.title}}
+          </h5>
+        </div>
+        <img class="card-img-top" [src]="item.content.image.url" style="background-color: #fff">
+        <div class="card-body">
+          <p class="card-text">{{item.content.desc}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

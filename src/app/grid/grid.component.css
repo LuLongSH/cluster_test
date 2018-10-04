@@ -1,0 +1,30 @@
+.flex-container {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  grid-auto-rows: 20px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.flex-item {
+  background-color: #ffffff;
+}
+
+p{
+  margin-bottom: auto;
+}
+.card,.card-img-top{
+  border-radius: 0px;
+  border: none;
+}
+.card-header{
+  background-color: #f44336;
+  border-radius: 0px;
+  color: white;
+}
+
+@media screen and (max-width: 500px) {
+  .flex-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+}
